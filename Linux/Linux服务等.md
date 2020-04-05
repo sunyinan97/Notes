@@ -29,7 +29,7 @@ title: Linux服务等
 这时我们已经知道怎么搞了，但是怎么命名软连接呢...没有chkconfig那么爽的工具，有点难受，后来我发现了`sysv-rc-conf `.
 > 有一次安装找不到这东西，后来发现是因为他source.list就用了清华的源，添加`deb http://archive.ubuntu.com/ubuntu/ trusty main universe restricted multiverse`就好了
 
-![](image/21-02-04.jpg)
+![](https://raw.githubusercontent.com/sunyinan17/notes/master/image/21-02-04.jpg)
 按空格进行将启动项反选，其他的都很好懂。
 ## 自启动存在的问题
 对于非RPM包的程序或者干脆是自己写的程序，如何自启动呢，网上给了一大堆设置自启动脚本的办法。但是我一直都用一个比较放肆的办法，无论是centos的chkconfig和service还是ubuntu的sysv-rc-conf，能处理RMP包的服务不是因为他们有啥特异功能，就是因为他们只看/etc/init.d目录下的启动脚本。没什么其他的耦合！所以你可以把你的启动脚本放进去，虽然这样会让高手觉得不优雅(这样做多了会影响纯净的init.d目录)，但是未来某一天当另一个人接手的时候，我觉得这种方式更容易说明白。因为我们就放了一个脚本用sysv-rc-conf设置了一下，没那么复杂的步骤。
