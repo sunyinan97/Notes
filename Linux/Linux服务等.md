@@ -29,7 +29,7 @@ title: Linux服务等
 这时我们已经知道怎么搞了，但是怎么命名软连接呢...没有chkconfig那么爽的工具，有点难受，后来我发现了`sysv-rc-conf `.
 > 有一次安装找不到这东西，后来发现是因为他source.list就用了清华的源，添加`deb http://archive.ubuntu.com/ubuntu/ trusty main universe restricted multiverse`就好了
 
-![](image/21-02-04.jpg)
+![](https://raw.githubusercontent.com/sunyinan17/notes/master/image/21-02-04.jpg)
 按空格进行将启动项反选，其他的都很好懂。
 
 ## 自启动存在的问题
